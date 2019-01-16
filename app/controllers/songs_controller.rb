@@ -36,7 +36,6 @@ class SongsController < ApplicationController
   patch "/songs/:slug" do
     @song=Song.create({name:@params[:slug]})
     @song.name=@params[:name]
-    binding.pry
     @song.artist=Artist.create({name:@params[:artist_name]})
     @song.genres << Genre.create({name:@params[:genre_name]})
     @song.save
