@@ -2,7 +2,7 @@
 <form method="POST" action="/songs/edit">
   <input type="hidden" id="hidden" name="_method" value="patch">
   <label>Name: </label>
-  <input id="Name" name="song_name" type="text" value="<#@song.name%>"/>
+  <input id="Name" name="song_name" type="text" value=""/>
   <input id="Artist Name" type="text" name="Artist Name"/>
   <input type="submit" id="Save" value="Save"/>
   <% @genres.each do |genre| %>
