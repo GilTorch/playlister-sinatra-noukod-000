@@ -33,7 +33,7 @@ class SongsController < ApplicationController
     erb :"songs/show"
   end
 
-  patch "/songs/:slug" do
+  patch "/songs" do
     @song=Song.create({name:@params[:slug]})
     binding.pry
     @song.artist=Artist.create({name:@params[:artist_name]})
