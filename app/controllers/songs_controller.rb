@@ -35,7 +35,7 @@ class SongsController < ApplicationController
 
   patch "/songs/:slug/edit" do
     puts "patch edit is called"
-    @song=Song.create({name:@params[:slug]})
+    @song=Song.find_by_slug(@params[:slug])
     @song.name=@params[:name]
     @song.artist=Artist.create({name:@params[:artist_name]})
     @song.genres << Genre.create({name:@params[:genre_name]})
