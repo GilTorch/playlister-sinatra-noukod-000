@@ -1,4 +1,4 @@
-
+<% puts @song.slug %>
 <form method="POST" action="/songs/<%=@song.slug%>/edit">
   <input type="hidden" id="hidden" name="_method" value="patch">
   <label>Name: </label>
