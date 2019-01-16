@@ -1,5 +1,5 @@
 
-<form method="POST" action="/songs/edit">
+<form method="POST" action="/songs/<%=@song.slug%>/edit">
   <input type="hidden" id="hidden" name="_method" value="patch">
   <label>Name: </label>
   <input id="Name" name="song_name" type="text" value=""/>
